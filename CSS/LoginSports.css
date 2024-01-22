@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
-
 * {
   box-sizing: border-box;
   margin: 0;
@@ -51,69 +50,56 @@
   border-radius: 1.5rem;
   gap: 3rem;
 }
-
-.img h1 {
-  font-size: 1.5rem;
-  color: #333;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  padding-left: 3.5rem;
+.login #img-LoginHeader {
+  height: 15vh;
+  width: 15vw;
 }
-
-.img h1 {
-  opacity: 0;
-  animation: fadeIn 1.5s ease-in-out forwards;
+.login h1 {
+  text-decoration: underline;
 }
-
-.section-login {
+.login .section-login {
   display: flex;
   width: 100%;
   justify-content: center;
   flex-direction: column;
   gap: 0.5rem;
 }
-
-.footer-login {
+.login .footer-login {
   display: flex;
   font-size: 0.8rem;
   justify-content: center;
   padding-bottom: 1.5rem;
 }
-
-.footer-login a {
-    font-size: 0.5;
+.login .footer-login a {
+  font-size: 0.5;
   padding-left: 1.5rem;
 }
-
-.input-with-icon {
+.login .input-with-icon {
   position: relative;
 }
-.input-with-icon input {
+.login .input-with-icon input {
   height: 2.5rem;
   border-radius: 0.3rem;
 }
-
-#button-login {
+.login #button-login {
   height: 2.5rem;
-  background-color: #0099ffab;
+  background-color: rgba(0, 153, 255, 0.6705882353);
   border-radius: 0.3rem;
 }
-
-#button-register {
+.login #button-register {
   height: 2.5rem;
-  background-color: #ffffffab;
+  background-color: rgba(255, 255, 255, 0.6705882353);
   width: 100%;
   color: #0099ff;
   font-weight: 900;
-  border-color: #0099ffab;
+  border-color: rgba(0, 153, 255, 0.6705882353);
   border-radius: 0.3rem;
 }
-
-.input-field {
+.login .input-field {
   padding-left: 40px;
   width: 100%;
 }
-
-.icon {
+.login .icon {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -122,39 +108,27 @@
   font-size: 18px;
 }
 
-.img {
+.img-aside {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #c4eaf2;
-  gap: 2rem;
-  padding: 5rem;
+  gap: 3rem;
+  padding: 6rem;
   height: 100%;
 }
-
-#img-header {
-  max-height: 30vh;
-  max-width: 20vw;
+.img-aside h1 {
+  font-size: 1.5rem;
+  color: #333;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  padding-left: 3.5rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-in-out forwards;
 }
-
-#img-Sports {
-  max-height: 50vh;
-  max-width: 50vw;
-}
-
-.signup {
-  display: none;
-}
-
-/* Adicionando a animação de rotação */
-#card {
-  transition: transform 0.5s ease-in-out;
-}
-
-/* Adicionando estilos para o estado de cadastro */
-#card.signup {
-  transform: rotateY(180deg);
+.img-aside #img-Sports {
+  height: 50vh;
+  width: 30vw;
 }
 
 @keyframes fadeIn {
@@ -165,206 +139,200 @@
     opacity: 1;
   }
 }
-
 @media screen and (max-width: 1630px) {
-
-  #img-Sports {
+  .main-content {
+    font-size: 13;
+  }
+  .img-aside #img-Sports {
     max-height: 50vh;
     max-width: 30vw;
   }
-
 }
-
-
-
+@media screen and (max-width: 1500px) {
+  .main-content {
+    font-size: 13px;
+  }
+  .main-content #img-LoginHeader {
+    height: 15vh;
+    width: 15vw;
+  }
+}
 @media screen and (max-width: 1375px) {
-  .img {
-    padding: 4rem;
+  .img-aside {
+    padding: 3rem;
     justify-content: center;
     align-items: center;
   }
-
-  .img h1 {
+  .img-aside h1 {
     font-size: 20px;
     padding-left: 1.5rem;
   }
-
-  .section-login{
-    padding-bottom: 2rem;
+  .img-aside #img-Sports {
+    height: 35vh;
+    width: 50vw;
   }
-
-  #img-Sports {
-    max-height: 35vh;
-    max-width: 30vw;
+  .main-login {
+    font-size: 12px;
   }
-
-  .login {
+  .main-login .login {
     width: 100%;
-    height: 80%;
+    height: 100%;
     gap: 1rem;
     padding: 1rem;
   }
-}
-
-@media screen and (max-width: 1200px) {
-  .img {
-    justify-content: center;
-    align-items: center;
+  .main-login .login #img-LoginHeader {
+    height: 13vh;
+    width: 17vw;
   }
-
+  .main-login .login .section-login {
+    padding-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .img-aside {
+    padding: 1rem;
+  }
   .input-with-icon {
     font-size: 10px;
   }
-
 }
-
 @media screen and (max-width: 1070px) {
-    .login {
-        width: 100%;
-        height: 70%;
-        border: 2px solid black;
-      }
-  
-   .img {
-    padding: 1rem;
+  .main-content {
+    height: 80%;
+    width: 90%;
+  }
+  .main-content .img-aside {
     justify-content: center;
     align-items: center;
   }
-
-  .img h1 {
-    font-size: 17px;
+  .main-content .img-aside #img-Sports {
+    height: 40vh;
+    width: 50vw;
+  }
+  .main-content .img-aside h1 {
+    font-size: 22px;
     padding-left: 1.5rem;
   }
-
-
-  .main-login h1 {
-    font-size: 15px;
-  }
-
-  .input-with-icon {
-    font-size: 8px;
-    height: 1.7rem;
-  }
-  
-  .main-content {
+  .main-content .img-aside .login {
+    width: 80%;
     height: 70%;
-    border-radius: 1.5rem;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.452);
   }
-
-
-  .input-with-icon input {
+  .main-content .img-aside .login .input-with-icon {
+    font-size: 8px;
+    height: 2rem;
+  }
+  .main-content .img-aside .login .input-with-icon input {
     height: 1.5rem;
   }
-  
-  #button-login {
+  .main-content .img-aside .login #button-login {
     height: 1.5rem;
-    background-color: #0099ffab;
+    background-color: rgba(0, 153, 255, 0.6705882353);
     border-radius: 0.3rem;
   }
-  
-  #button-register {
+  .main-content .img-aside .login #button-register {
     height: 1.5rem;
   }
-
-  .footer-login {
+  .main-content .img-aside .login .footer-login {
     font-size: 0.7rem;
   }
 }
-
-
 @media screen and (max-width: 955px) {
-  
-   .img {
-    padding: 0.8rem;
+  .img-aside {
+    padding: 1rem;
     justify-content: center;
     align-items: center;
   }
-
-  .input-with-icon {
+  .img-aside h1 {
+    font-size: 22px;
+  }
+  .img-aside #img-Sports {
+    height: 30vh;
+  }
+  .img-aside .input-with-icon {
     font-size: 10px;
   }
-
-  .section-login *{
+  .img-aside .section-login * {
     font-size: 12px;
   }
-
-  .input-field {
+  .img-aside .input-field {
     padding-left: 25px;
   }
-
-}
-
-@media screen and (max-width: 800px) {
-
-  .img {
-    display: none;
-  }
-
-  .img div {
-    display: none;
-  }
-
-  .img h1 {
-    display: none;
-  }
-
-  .input-with-icon input {
-    height: 1.7rem;
-  }
-
-  #button-register {
-    height: 1.7rem;
-  }
-
-  #button-login {
-    height: 1.7rem;
-  }
-
-  #img-header {
-    max-height: 40vh;
-    max-width: 35vw;
-  }
-
-
-  .login {
+  .main-login {
     width: 100%;
-    height: 100%;
+  }
+  .login {
     border: 2px solid black;
     border-radius: 1.5rem;
-    gap: 1rem;
+    gap: 2rem;
     padding: 1rem;
   }
-
-  .main-login {
-    padding: 5rem;
+  .login h1 {
+    font-size: 20px;
+  }
+  .login #button-register {
+    height: 1.7rem;
+  }
+  .login #button-login {
+    height: 1.7rem;
+  }
+  .login #img-LoginHeader {
+    height: 15vh;
+    width: 25vw;
   }
 }
-
-
-@media screen and (max-width: 600px) {
-
-  #img-header {
-    max-height: 40vh;
-    max-width: 45vw;
+@media screen and (max-width: 800px) {
+  .main-content {
+    height: 95%;
   }
-
-
-
+  .main-content .login {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 1.5rem;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  .main-content .login h1 {
+    font-size: 20px;
+  }
+  .main-content .login #button-register {
+    height: 2rem;
+  }
+  .main-content .login #button-login {
+    height: 2rem;
+  }
+  .main-content .login #img-LoginHeader {
+    height: 20vh;
+    width: 45vw;
+  }
+  .img-aside {
+    display: none;
+  }
+  .img-aside div {
+    display: none;
+  }
+  .img-aside h1 {
+    display: none;
+  }
+  .img-aside input {
+    height: 1.7rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #img-LoginHeader {
+    height: 15vh;
+    width: 46vw;
+  }
   div.main-login {
     padding: 2rem;
   }
-
-  .login{
+  .login {
     padding: 2;
   }
 }
-
-
 @media screen and (max-width: 600px) {
   div.main-login {
     padding: 0.5rem;
   }
 }
 
+/*# sourceMappingURL=LoginSports.css.map */
