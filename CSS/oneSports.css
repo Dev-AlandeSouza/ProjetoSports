@@ -8,19 +8,20 @@
 
 .container {
   display: flex;
+  flex-direction: unset;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background: rgb(196, 234, 242);
-  background: linear-gradient(326deg, rgb(196, 234, 242) 0%, rgb(255, 255, 255) 57%, rgba(92, 212, 255, 0.651) 100%);
+  background: rgb(0, 153, 255);
+  background: linear-gradient(153deg, rgb(0, 153, 255) 0%, rgb(244, 244, 244) 36%, rgb(196, 234, 242) 100%);
 }
 
 .main-content {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   width: 70%;
   height: 75%;
   border-radius: 1.5rem;
@@ -52,23 +53,26 @@
   gap: 3rem;
 }
 .login #img-LoginHeader {
-  height: 15vh;
-  width: 15vw;
+  height: 16vh;
+  width: 12vw;
 }
 .login h1 {
   text-decoration: underline;
 }
 .login .section-login {
   display: flex;
-  width: 100%;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: unset;
+  width: 100%;
   gap: 0.5rem;
 }
 .login .footer-login {
   display: flex;
-  font-size: 0.8rem;
+  flex-direction: unset;
   justify-content: center;
+  align-items: unset;
+  font-size: 0.8rem;
   padding-bottom: 1.5rem;
 }
 .login .footer-login a {
@@ -85,16 +89,26 @@
 .login #button-login {
   height: 2.5rem;
   background-color: rgba(0, 153, 255, 0.6705882353);
+  color: #000000;
+  font-weight: 900;
   border-radius: 0.3rem;
+  cursor: pointer;
 }
 .login #button-register {
   height: 2.5rem;
   background-color: rgba(255, 255, 255, 0.6705882353);
   width: 100%;
-  color: #0099ff;
+  color: rgba(0, 153, 255, 0.6705882353);
   font-weight: 900;
   border-color: rgba(0, 153, 255, 0.6705882353);
   border-radius: 0.3rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.login #button-register:hover {
+  background-color: rgba(0, 153, 255, 0.6705882353);
+  color: #000000;
+  border-color: #000000;
 }
 .login .input-field {
   padding-left: 40px;
@@ -113,7 +127,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: unset;
   background-color: #c4eaf2;
   gap: 3rem;
   padding: 6rem;
@@ -161,6 +175,8 @@
 @media screen and (max-width: 1375px) {
   .img-aside {
     padding: 3rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -169,8 +185,8 @@
     padding-left: 1.5rem;
   }
   .img-aside #img-Sports {
-    height: 35vh;
-    width: 50vw;
+    height: 30vh;
+    width: 30vw;
   }
   .main-login {
     font-size: 12px;
@@ -182,8 +198,8 @@
     padding: 1rem;
   }
   .main-login .login #img-LoginHeader {
-    height: 13vh;
-    width: 17vw;
+    height: 15vh;
+    width: 13vw;
   }
   .main-login .login .section-login {
     padding-bottom: 2rem;
@@ -203,6 +219,8 @@
     width: 90%;
   }
   .main-content .img-aside {
+    display: flexbox;
+    flex-direction: colunm;
     justify-content: center;
     align-items: center;
   }
@@ -240,8 +258,10 @@
 @media screen and (max-width: 955px) {
   .img-aside {
     padding: 1rem;
-    justify-content: center;
-    align-items: center;
+    display: column;
+    flex-direction: center;
+    justify-content: unset;
+    align-items: flex;
   }
   .img-aside h1 {
     font-size: 22px;
@@ -302,10 +322,13 @@
     height: 2rem;
   }
   .main-content .login #img-LoginHeader {
-    height: 20vh;
-    width: 45vw;
+    height: 25vh;
+    width: 33vw;
   }
   .img-aside {
+    display: none;
+  }
+  .img-aside #img-Sports {
     display: none;
   }
   .img-aside div {
@@ -313,9 +336,6 @@
   }
   .img-aside h1 {
     display: none;
-  }
-  .img-aside input {
-    height: 1.7rem;
   }
 }
 @media screen and (max-width: 600px) {
@@ -336,4 +356,4 @@
   }
 }
 
-/*# sourceMappingURL=LoginSports.css.map */
+/*# sourceMappingURL=oneSports.css.map */

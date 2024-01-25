@@ -1,5 +1,6 @@
 @import "../autoload/fonts";
-
+@import "../utils/mixins";
+@import "../common/variables";
 
 * {
   box-sizing: border-box;
@@ -9,20 +10,15 @@
 }
 
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flexbox(flex, unset, center, center);
   width: 100vw;
   height: 100vh;
-  background: rgb(196,234,242);
-background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 57%, rgba(92, 212, 255, 0.651) 100%);
+  background: rgb(0,153,255);
+background: linear-gradient(153deg, rgba(0,153,255,1) 0%, rgba(244,244,244,1) 36%, rgba(196,234,242,1) 100%);
 }
 
 .main-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
+  @include flexbox(flex, row, center, center);
   width: 70%;
   height: 75%;
   border-radius: 1.5rem;
@@ -31,10 +27,7 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
 }
 
 .main-login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexbox(flex, column, center, center);
   height: 100%;
   width: 100%;
   background-color: #ffffff;
@@ -42,10 +35,7 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
 }
 
 .login {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flexbox(flex, column, center, center);
   width: 100%;
   height: 100%;
   padding: 2rem;
@@ -54,9 +44,8 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
   gap: 3rem;
 
   #img-LoginHeader {
-    height: 15vh;
-    width: 15vw;
-    
+    height: 16vh;
+    width: 12vw;
   }
 
   h1 {
@@ -64,17 +53,14 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
   }
 
   .section-login {
-    display: flex;
+    @include flexbox(flex, column, center, unset);
     width: 100%;
-    justify-content: center;
-    flex-direction: column;
     gap: 0.5rem;
   }
 
   .footer-login {
-    display: flex;
+    @include flexbox(flex, unset, center, unset);
     font-size: 0.8rem;
-    justify-content: center;
     padding-bottom: 1.5rem;
   }
 
@@ -93,18 +79,29 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
 
   #button-login {
     height: 2.5rem;
-    background-color: #0099ffab;
+    background-color: $primary-color;
+    color: $color-black;
+    font-weight: 900;
     border-radius: 0.3rem;
+    cursor: pointer;
   }
 
   #button-register {
     height: 2.5rem;
     background-color: #ffffffab;
     width: 100%;
-    color: #0099ff;
+    color: $primary-color;
     font-weight: 900;
-    border-color: #0099ffab;
+    border-color: $primary-color;
     border-radius: 0.3rem;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $color-black;
+      border-color: $color-black;
+    }
   }
 
   .input-field {
@@ -123,11 +120,8 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
 }
 
 .img-aside {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: #c4eaf2;
+  @include flexbox(flex, column, center, unset);
+  background-color: $second-color;
   gap: 3rem;
   padding: 6rem;
   height: 100%;
@@ -183,8 +177,7 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
 @media screen and (max-width: 1375px) {
   .img-aside {
     padding: 3rem;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(flex, column, center, center);
 
     h1 {
       font-size: 20px;
@@ -192,8 +185,8 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
     }
 
     #img-Sports {
-      height: 35vh;
-      width: 50vw;
+      height: 30vh;
+      width: 30vw;
     }
   }
 
@@ -207,8 +200,8 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
       padding: 1rem;
 
       #img-LoginHeader {
-        height: 13vh;
-        width: 17vw;
+        height: 15vh;
+        width: 13vw;
       }
 
       .section-login {
@@ -234,10 +227,8 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
     width: 90%;
 
     .img-aside {
-      justify-content: center;
-      align-items: center;
+      @include flexbox(flexbox, colunm, center, center);
 
-    
       #img-Sports {
         height: 40vh;
         width: 50vw;
@@ -248,47 +239,45 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
         padding-left: 1.5rem;
       }
 
-        .login {
-          width: 80%;
-          height: 70%;
+      .login {
+        width: 80%;
+        height: 70%;
 
-          .input-with-icon {
-            font-size: 8px;
-            height: 2rem;
-          }
+        .input-with-icon {
+          font-size: 8px;
+          height: 2rem;
+        }
 
-          .input-with-icon input {
-            height: 1.5rem;
-          }
+        .input-with-icon input {
+          height: 1.5rem;
+        }
 
-          #button-login {
-            height: 1.5rem;
-            background-color: #0099ffab;
-            border-radius: 0.3rem;
-          }
+        #button-login {
+          height: 1.5rem;
+          background-color: $primary-color;
+          border-radius: 0.3rem;
+        }
 
-          #button-register {
-            height: 1.5rem;
-          }
+        #button-register {
+          height: 1.5rem;
+        }
 
-          .footer-login {
-            font-size: 0.7rem;
-          }
+        .footer-login {
+          font-size: 0.7rem;
         }
       }
     }
   }
+}
 
 @media screen and (max-width: 955px) {
+  .img-aside {
+    padding: 1rem;
+    @include flexbox(column, center, unset, flex);
 
-    .img-aside {
-      padding: 1rem;
-      justify-content: center;
-      align-items: center;
-
-      h1 {
-        font-size: 22px;
-      }
+    h1 {
+      font-size: 22px;
+    }
 
     #img-Sports {
       height: 30vh;
@@ -307,7 +296,7 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
     }
   }
 
-  .main-login{
+  .main-login {
     width: 100%;
   }
   .login {
@@ -339,34 +328,38 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
   .main-content {
     height: 95%;
 
-      .login {
-        width: 100%;
-        border: 2px solid black;
-        border-radius: 1.5rem;
-        gap: 2rem;
-        padding: 1rem;
-  
-        h1 {
-          font-size: 20px;
-        }
-  
-        #button-register {
-          height: 2rem;
-        }
-  
-        #button-login {
-          height: 2rem;
-        }
-  
-        #img-LoginHeader {
-          height: 20vh;
-          width: 45vw;
-        }
+    .login {
+      width: 100%;
+      border: 2px solid black;
+      border-radius: 1.5rem;
+      gap: 2rem;
+      padding: 1rem;
+
+      h1 {
+        font-size: 20px;
+      }
+
+      #button-register {
+        height: 2rem;
+      }
+
+      #button-login {
+        height: 2rem;
+      }
+
+      #img-LoginHeader {
+        height: 25vh;
+        width: 33vw;
+      }
     }
   }
 
   .img-aside {
-    display: none;
+      display: none;
+
+    #img-Sports {
+      display: none;
+    }
 
     div {
       display: none;
@@ -374,10 +367,6 @@ background: linear-gradient(326deg, rgba(196,234,242,1) 0%, rgba(255,255,255,1) 
 
     h1 {
       display: none;
-    }
-
-    input {
-      height: 1.7rem;
     }
   }
 }
