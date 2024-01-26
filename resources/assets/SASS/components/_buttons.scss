@@ -1,0 +1,44 @@
+/*Login - Buttons
+====================================================*/
+.input-with-icon {
+    position: relative;
+  }
+  
+  .input-with-icon input {
+    height: 2.5rem;
+    border-radius: 0.3rem;
+  }
+  
+  #button-login,
+  #button-register {
+    height: 2.5rem;
+    font-weight: 900;
+    border-radius: 0.3rem;
+    cursor: pointer;
+  }
+  
+  #button-login {
+    background-color: $primary-color;
+    color: $color-black;
+  }
+  
+  #button-register {
+    background-color: #ffffffab;
+    width: 100%;
+    color: $primary-color;
+    border-color: $primary-color;
+    transition: all 0.3s;
+  
+    &:hover {
+      background-color: $primary-color;
+      color: $color-black;
+      border-color: $color-black;
+    }
+  }
+  
+  .input-field {
+    padding-left: 40px;
+    width: 100%;
+  }
+  /*Login - Buttons
+====================================================*/

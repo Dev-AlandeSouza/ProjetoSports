@@ -1,0 +1,5 @@
+.section-login {
+    @include flexbox(flex, column, center, unset);
+    width: 100%;
+    gap: 0.5rem;
+  }
