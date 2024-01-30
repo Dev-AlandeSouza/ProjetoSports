@@ -1,37 +1,41 @@
 $(document).ready(function () {
-    function startAnimation() {
+    function createLetterSpans() {
         var text = $("#animatedTitle").text();
         var newText = "";
 
         for (var i = 0; i < text.length; i++) {
-            newText += "<span class='letter-" + i + "'>" + text[i] + "</span>";
+            newText += `<span class="letter-${i}">${text[i]}</span>`;
         }
 
         $("#animatedTitle").html(newText);
+    }
 
-        for (var i = 0; i < text.length; i++) {
-            animateLetter(i);
+    function animateLetters() {
+        var textLength = $("#animatedTitle span").length;
+
+        for (var i = 0; i < textLength; i++) {
+            setTimeout(function (index) {
+                animateLetter(index);
+            }, i * 120, i);
         }
     }
 
     function animateLetter(index) {
-        var delay = index * 100;
-
-        setTimeout(function () {
-            $(".letter-" + index).addClass("animate__animated animate__zoomIn").css("color", getRandomColor());
-        }, delay);
+        $(".letter-" + index).addClass("animate__animated animate__zoomIn").css("color", getRandomColor());
     }
 
     function getRandomColor() {
-        var blueComponent = Math.floor(Math.random() * 256);
-        var color = "rgb(0, 0, " + blueComponent + ")";
         return "#0099ff";
     }
 
-    startAnimation();
+    function restartAnimation() {
+        $("#animatedTitle span").removeClass("animate__animated animate__zoomIn").css("color", "");
+        createLetterSpans();
+        animateLetters();
+    }
 
-    setInterval(function () {
-        $("#animatedTitle").find("span").removeClass("animate__animated animate__zoomIn").css("color", "");
-        startAnimation();
-    }, 3000);
+    createLetterSpans();
+    animateLetters();
+
+    setInterval(restartAnimation, 2200);
 });
