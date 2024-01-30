@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 /*Login - Buttons
 ====================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
 .input-with-icon {
   position: relative;
 }
@@ -143,6 +144,38 @@
     opacity: 1;
   }
 }
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+.container-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.content-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80%;
+  width: 40%;
+  border: 2px solid black;
+  padding: 2em;
+  gap: 5rem;
+}
+
+.animated-text {
+  display: inline-block;
+}
+
 .footer-login {
   display: flex;
   flex-direction: unset;
