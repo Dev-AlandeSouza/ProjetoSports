@@ -8,21 +8,26 @@
     font-family: "Quicksand", sans-serif;
 }
 
-.container-register {
-    @include flexbox(flex, column, center, center);
-    width: 100vw;
-    height: 100vh;
-}
-
 .content-register {
     @include flexbox(flex, column, center, center);
-    height: 80%;
-    width: 40%;
-    border: 2px solid black;
-    padding: 2em;
-    gap: 5rem;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    border: 2px solid $primary-color;
+    border-radius: 1.5rem;
+    gap: 3rem;
 }
 
 .animated-text {
     display: inline-block;
+}
+
+.register {
+    display: none;
+    height: 100vh;
+  }
+
+
+.section-register{
+    @include flexbox(flex, row, space-around, center)
 }

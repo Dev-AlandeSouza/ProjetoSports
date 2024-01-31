@@ -16,7 +16,7 @@ $(document).ready(function () {
         for (var i = 0; i < textLength; i++) {
             setTimeout(function (index) {
                 animateLetter(index);
-            }, i * 120, i);
+            }, i * 100, i);
         }
     }
 
@@ -39,3 +39,33 @@ $(document).ready(function () {
 
     setInterval(restartAnimation, 2200);
 });
+
+function toggleRegistration() {
+    const loginCard = document.querySelector('.login');
+    const registerCard = document.querySelector('.register');
+    const reverseButton = document.getElementById('button-reverse');
+
+    loginCard.classList.add('flip-vertical-right');
+
+    setTimeout(() => {
+      loginCard.style.display = 'none';
+      registerCard.style.display = 'block';
+      registerCard.classList.toggle('flip-vertical-right');
+      reverseButton.style.display = 'block';
+    }, 650); 
+  }
+
+  function reverseCard() {
+    const loginCard = document.querySelector('.login');
+    const registerCard = document.querySelector('.register');
+    const reverseButton = document.getElementById('button-reverse');
+
+    registerCard.classList.toggle('flip-vertical-right');
+
+    setTimeout(() => {
+      registerCard.style.display = 'none';
+      loginCard.style.display = 'flex';
+      loginCard.classList.remove('flip-vertical-right');
+      reverseButton.style.display = 'none'; // 
+    }, 650); 
+  }
