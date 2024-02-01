@@ -27,6 +27,10 @@
     height: 100vh;
   }
 
+ #inputState{
+    width: 10.2rem;
+} 
+
 
 .section-register{
     @include flexbox(flex, row, space-around, center)

@@ -52,7 +52,7 @@ function toggleRegistration() {
       registerCard.style.display = 'block';
       registerCard.classList.toggle('flip-vertical-right');
       reverseButton.style.display = 'block';
-    }, 650); 
+    }, 620); 
   }
 
   function reverseCard() {
@@ -67,5 +67,5 @@ function toggleRegistration() {
       loginCard.style.display = 'flex';
       loginCard.classList.remove('flip-vertical-right');
       reverseButton.style.display = 'none'; // 
-    }, 650); 
+    }, 620); 
   }

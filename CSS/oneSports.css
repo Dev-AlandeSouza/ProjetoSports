@@ -14,14 +14,19 @@
 #button-login,
 #button-register {
   height: 2.5rem;
-  font-weight: 900;
   border-radius: 0.3rem;
   cursor: pointer;
+  border: 0.1rem solid #5c5c5c;
 }
 
 #button-login {
   background-color: rgba(0, 153, 255, 0.6705882353);
-  color: #000000;
+  color: #ffffff;
+  transition: all 0.6s;
+}
+#button-login:hover {
+  background-color: #0384da;
+  border-color: #000000;
 }
 
 #button-register {
@@ -29,25 +34,39 @@
   width: 100%;
   color: rgba(0, 153, 255, 0.6705882353);
   border-color: rgba(0, 153, 255, 0.6705882353);
-  transition: all 0.3s;
+  transition: all 0.6s;
 }
 #button-register:hover {
-  background-color: rgba(0, 153, 255, 0.6705882353);
-  color: #000000;
+  background-color: #0384da;
+  color: #ffffff;
   border-color: #000000;
 }
 
 .input-field {
   padding-left: 40px;
   width: 100%;
+  border: 0.1rem solid #cecdcd;
+}
+
+i.fas.fa-user.icon, i.fas.fa-lock.icon {
+  color: #999999;
 }
 
 button.btn.btn-primary {
   width: 10rem;
 }
 
-/*Login - Buttons
+/*Register - Buttons
 ====================================================*/
+.btn {
+  background-color: rgba(0, 153, 255, 0.6705882353);
+  transition: all 0.6s;
+}
+.btn:hover {
+  background-color: #0384da;
+  border-color: #000000;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -104,9 +123,6 @@ button.btn.btn-primary {
 .login #img-LoginHeader {
   height: 16vh;
   width: 12vw;
-}
-.login h1 {
-  text-decoration: underline;
 }
 .login .icon {
   position: absolute;
@@ -200,6 +216,10 @@ button.btn.btn-primary {
 .register {
   display: none;
   height: 100vh;
+}
+
+#inputState {
+  width: 10.2rem;
 }
 
 .section-register {

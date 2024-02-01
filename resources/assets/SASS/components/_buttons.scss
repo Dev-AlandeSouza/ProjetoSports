@@ -12,14 +12,20 @@
   #button-login,
   #button-register {
     height: 2.5rem;
-    font-weight: 900;
     border-radius: 0.3rem;
     cursor: pointer;
+    border: 0.1rem solid #5c5c5c;
   }
   
   #button-login {
     background-color: $primary-color;
-    color: $color-black;
+    color:$color-white ;
+    transition: all 0.6s;
+
+    &:hover {
+      background-color: $color-transition;
+      border-color: $color-black;
+    }
   }
   
   #button-register {
@@ -27,11 +33,11 @@
     width: 100%;
     color: $primary-color;
     border-color: $primary-color;
-    transition: all 0.3s;
+    transition: all 0.6s;
   
     &:hover {
-      background-color: $primary-color;
-      color: $color-black;
+      background-color: $color-transition;
+      color: $color-white;
       border-color: $color-black;
     }
   }
@@ -39,6 +45,11 @@
   .input-field {
     padding-left: 40px;
     width: 100%;
+    border: 0.1rem solid #cecdcd;
+  }
+
+  i.fas.fa-user.icon, i.fas.fa-lock.icon{
+    color:#999999;
   }
 
   button.btn.btn-primary{
@@ -46,5 +57,16 @@
   }
 
 
-  /*Login - Buttons
+/*Register - Buttons
 ====================================================*/
+
+.btn{
+  background-color:  $primary-color;
+  transition: all 0.6s;
+
+  &:hover {
+    background-color: $color-transition;
+    border-color: $color-black;
+  }
+
+}
