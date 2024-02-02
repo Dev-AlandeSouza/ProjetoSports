@@ -1,243 +1,225 @@
 @media screen and (max-width: 1630px) {
-    .main-content {
-      font-size: 13px;
-    }
-  
-    .container-boxImg {
-      @include flexbox(flex, column, center, center);
-      #img-Sports {
-        max-height: 50vh;
-        max-width: 30vw;
-      }
-    }
-
-    .content-register{
-      padding: 1rem;
-    }
-
-    button.btn.btn-primary {
-      width: 8rem;
+  .main-content {
+    font-size: 13px;
   }
 
-  #inputState{
+  .container-boxImg {
+    @include flexbox(flex, column, center, center);
+    #img-Sports {
+      max-height: 50vh;
+      max-width: 30vw;
+    }
+  }
+
+  .content-register {
+    padding: 1rem;
+  }
+
+  button.btn.btn-primary {
+    width: 8rem;
+  }
+
+  #inputState {
     width: 150%;
+  }
+}
 
+@media screen and (max-width: 1500px) {
+  .main-content {
+    font-size: 13px;
+
+    #img-LoginHeader {
+      height: 15vh;
+      width: 15vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1375px) {
+  .container-boxImg {
+    padding: 3rem;
+
+    #img-Sports {
+      height: 40vh;
+      width: 30vw;
+    }
   }
 
-  }
-  
-  @media screen and (max-width: 1500px) {
-    .main-content {
-      font-size: 13px;
-  
+  .main-login {
+    font-size: 12px;
+
+    .login {
+      width: 100%;
+      height: 100%;
+      gap: 1rem;
+      padding: 1rem;
+
       #img-LoginHeader {
         height: 15vh;
-        width: 15vw;
+        width: 13vw;
       }
-    }
-  }
-  
-  @media screen and (max-width: 1375px) {
-    .container-boxImg {
-      padding: 3rem;
-  
-      #img-Sports {
-        height: 40vh;
-        width: 30vw;
-      }
-    }
-  
-    .main-login {
-      font-size: 12px;
-  
-      .login {
-        width: 100%;
-        height: 100%;
-        gap: 1rem;
-        padding: 1rem;
-  
-        #img-LoginHeader {
-          height: 15vh;
-          width: 13vw;
-        }
-  
-        .section-login {
-          padding-bottom: 2rem;
-        }
-      }
-    }
-  }
-  
-  @media screen and (max-width: 1200px) {
 
-    .main-content {
-      height: 80vh;
-      width: 80vw;
+      .section-login {
+        padding-bottom: 2rem;
+      }
     }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .main-content {
+    height: 80vh;
+    width: 80vw;
+  }
+
+  .container-boxImg {
+    padding: 1rem;
+
+    #img-Sports {
+      max-width: 400px;
+    }
+  }
+
+  .input-with-icon {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .main-content {
+    width: 90vw;
 
     .container-boxImg {
-      padding: 1rem;
-
-      #img-Sports {
-       max-width: 400px;
-      }
-     
-    }
-  
-    .input-with-icon {
-      font-size: 10px;
-    }
-  }
-  
-  @media screen and (max-width: 1070px) {
-    .main-content {
+      height: 90vh;
       width: 90vw;
-      
-  
-      .container-boxImg {
-        height: 90vh;
-        width: 90vw;
-        
-        #img-Sports {
-          height: 50%;
-          width: 100%;
+
+      #img-Sports {
+        height: 50%;
+        width: 100%;
+      }
+
+      h1 {
+        font-size: 22px;
+        padding-left: 1.5rem;
+      }
+
+      .login {
+        width: 70%;
+        height: 70%;
+
+        .input-with-icon {
+          font-size: 8px;
+          height: 2rem;
         }
-  
-        h1 {
-          font-size: 22px;
-          padding-left: 1.5rem;
+
+        .input-with-icon input {
+          height: 1.5rem;
         }
-  
-        .login {
-          width: 70%;
-          height: 70%;
-  
-          .input-with-icon {
-            font-size: 8px;
-            height: 2rem;
-          }
-  
-          .input-with-icon input {
-            height: 1.5rem;
-          }
-  
-          #button-login {
-            height: 1.5rem;
-            background-color: $primary-color;
-            border-radius: 0.3rem;
-          }
-  
-          #button-register {
-            height: 1.5rem;
-          }
-  
-          .footer-login {
-            font-size: 0.7rem;
-          }
+
+        #button-login {
+          height: 1.5rem;
+          background-color: $primary-color;
+          border-radius: 0.3rem;
+        }
+
+        #button-register {
+          height: 1.5rem;
+        }
+
+        .footer-login {
+          font-size: 0.7rem;
         }
       }
     }
   }
-  
-  @media screen and (max-width: 955px) {
-  
-      #img-Sports {
-        height: 30vh;
+}
+
+@media screen and (max-width: 955px) {
+  #img-Sports {
+    height: 30vh;
+  }
+
+  .input-with-icon {
+    font-size: 10px;
+  }
+
+  .section-login * {
+    font-size: 12px;
+  }
+
+  .input-field {
+    padding-left: 25px;
+  }
+
+  .main-login {
+    width: 100%;
+  }
+  .login {
+    padding: 1rem;
+
+    h1 {
+      font-size: 2rem;
+    }
+
+    #img-LoginHeader {
+      height: 15vh;
+      width: 25vw;
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-content {
+    height: 95%;
+
+    div.container-boxImg {
+      display: none;
+
+      #img-Sports,
+      div,
+      h1 {
+        display: none;
       }
-  
-      .input-with-icon {
-        font-size: 10px;
-      }
-  
-      .section-login * {
-        font-size: 12px;
-      }
-  
-      .input-field {
-        padding-left: 25px;
-      }
-  
-    .main-login {
-      width: 100%;
     }
     .login {
+      width: 100%;
+      border-radius: 1.5rem;
+      gap: 2rem;
       padding: 1rem;
-  
-      h1 {
-        font-size: 2rem;
-      }
-  
+
       #img-LoginHeader {
-        height: 15vh;
-        width: 25vw;
+        height: 23vh;
+        width: 35vw;
       }
     }
   }
 
-  @media screen and (max-width: 800px) {
-
-    .main-content {
-      height: 95%;
-
-      div.container-boxImg {
-        display: none;
-    
-        #img-Sports,
-        div,
-        h1 {
-          display: none;
-        }
-      }
-      .login {
-        width: 100%;
-        border-radius: 1.5rem;
-        gap: 2rem;
-        padding: 1rem;
-  
-        #img-LoginHeader {
-          height: 23vh;
-          width: 35vw;
-        }
-      }
-    }
-
-    button.btn.btn-primary {
-      width: 12rem;
-  }
-
-  #inputState{
-    width: 100%;
-
-  }
-  }
-  
-  
-  @media screen and (max-width: 600px) {
-   
-  
-    div.main-login {
-      padding: 1px;
-    }
-  
-    .main-content .login #img-LoginHeader {
-        height: 20vh;
-        width: 25vh;
-      }
-    }
-
-
-  @media screen and (max-width: 500px) {
   button.btn.btn-primary {
-      width: 7.5rem;
+    width: 12rem;
   }
 
-  #inputState{
+  #inputState {
     width: 100%;
-
   }
+}
+
+@media screen and (max-width: 600px) {
+  div.main-login {
+    padding: 1px;
   }
 
+  .main-content .login #img-LoginHeader {
+    height: 20vh;
+    width: 25vh;
+  }
+}
 
+@media screen and (max-width: 500px) {
+  button.btn.btn-primary {
+    width: 7.5rem;
+  }
 
-
-
+  #inputState {
+    width: 100%;
+  }
+}
