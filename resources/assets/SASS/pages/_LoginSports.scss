@@ -44,10 +44,15 @@ background: linear-gradient(153deg, rgba(0,153,255,1) 0%, rgba(244,244,244,1) 36
   border-radius: 1.5rem;
   gap: 3rem;
 
+  h1{
+    font-size:2rem;
+  }
+
   #img-LoginHeader {
     height: 16vh;
     width: 12vw;
   }
+
 
 
   .icon {

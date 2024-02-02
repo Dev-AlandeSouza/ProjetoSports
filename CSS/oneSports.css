@@ -120,6 +120,9 @@ button.btn.btn-primary {
   border-radius: 1.5rem;
   gap: 3rem;
 }
+.login h1 {
+  font-size: 2rem;
+}
 .login #img-LoginHeader {
   height: 16vh;
   width: 12vw;
@@ -254,11 +257,26 @@ button.btn.btn-primary {
 
 @media screen and (max-width: 1630px) {
   .main-content {
-    font-size: 13;
+    font-size: 13px;
+  }
+  .container-boxImg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .container-boxImg #img-Sports {
     max-height: 50vh;
     max-width: 30vw;
+  }
+  .content-register {
+    padding: 1rem;
+  }
+  button.btn.btn-primary {
+    width: 8rem;
+  }
+  #inputState {
+    width: 150%;
   }
 }
 @media screen and (max-width: 1500px) {
@@ -273,17 +291,9 @@ button.btn.btn-primary {
 @media screen and (max-width: 1375px) {
   .container-boxImg {
     padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .container-boxImg h1 {
-    font-size: 20px;
-    padding-left: 1.5rem;
   }
   .container-boxImg #img-Sports {
-    height: 30vh;
+    height: 40vh;
     width: 30vw;
   }
   .main-login {
@@ -304,8 +314,15 @@ button.btn.btn-primary {
   }
 }
 @media screen and (max-width: 1200px) {
+  .main-content {
+    height: 80vh;
+    width: 80vw;
+  }
   .container-boxImg {
     padding: 1rem;
+  }
+  .container-boxImg #img-Sports {
+    max-width: 400px;
   }
   .input-with-icon {
     font-size: 10px;
@@ -313,25 +330,22 @@ button.btn.btn-primary {
 }
 @media screen and (max-width: 1070px) {
   .main-content {
-    height: 80%;
-    width: 90%;
+    width: 90vw;
   }
   .main-content .container-boxImg {
-    display: flexbox;
-    flex-direction: colunm;
-    justify-content: center;
-    align-items: center;
+    height: 90vh;
+    width: 90vw;
   }
   .main-content .container-boxImg #img-Sports {
-    height: 40vh;
-    width: 50vw;
+    height: 50%;
+    width: 100%;
   }
   .main-content .container-boxImg h1 {
     font-size: 22px;
     padding-left: 1.5rem;
   }
   .main-content .container-boxImg .login {
-    width: 80%;
+    width: 70%;
     height: 70%;
   }
   .main-content .container-boxImg .login .input-with-icon {
@@ -354,39 +368,26 @@ button.btn.btn-primary {
   }
 }
 @media screen and (max-width: 955px) {
-  .container-boxImg {
-    padding: 1rem;
-    display: column;
-    flex-direction: center;
-    justify-content: unset;
-    align-items: flex;
-  }
-  .container-boxImg h1 {
-    font-size: 22px;
-  }
-  .container-boxImg #img-Sports {
+  #img-Sports {
     height: 30vh;
   }
-  .container-boxImg .input-with-icon {
+  .input-with-icon {
     font-size: 10px;
   }
-  .container-boxImg .section-login * {
+  .section-login * {
     font-size: 12px;
   }
-  .container-boxImg .input-field {
+  .input-field {
     padding-left: 25px;
   }
   .main-login {
     width: 100%;
   }
   .login {
-    border: 2px solid black;
-    border-radius: 1.5rem;
-    gap: 2rem;
     padding: 1rem;
   }
   .login h1 {
-    font-size: 20px;
+    font-size: 2rem;
   }
   .login #img-LoginHeader {
     height: 15vh;
@@ -397,45 +398,46 @@ button.btn.btn-primary {
   .main-content {
     height: 95%;
   }
+  .main-content div.container-boxImg {
+    display: none;
+  }
+  .main-content div.container-boxImg #img-Sports,
+  .main-content div.container-boxImg div,
+  .main-content div.container-boxImg h1 {
+    display: none;
+  }
   .main-content .login {
     width: 100%;
-    border: 2px solid black;
     border-radius: 1.5rem;
     gap: 2rem;
     padding: 1rem;
-  }
-  .main-content .login h1 {
-    font-size: 20px;
   }
   .main-content .login #img-LoginHeader {
     height: 23vh;
     width: 35vw;
   }
-  .container-boxImg {
-    display: none;
+  button.btn.btn-primary {
+    width: 12rem;
   }
-  .container-boxImg #img-Sports {
-    display: none;
-  }
-  .container-boxImg div {
-    display: none;
-  }
-  .container-boxImg h1 {
-    display: none;
+  #inputState {
+    width: 100%;
   }
 }
 @media screen and (max-width: 600px) {
   div.main-login {
-    padding: 2rem;
+    padding: 1px;
   }
   .main-content .login #img-LoginHeader {
     height: 20vh;
     width: 25vh;
   }
 }
-@media screen and (max-width: 600px) {
-  div.main-login {
-    padding: 0.5rem;
+@media screen and (max-width: 500px) {
+  button.btn.btn-primary {
+    width: 7.5rem;
+  }
+  #inputState {
+    width: 100%;
   }
 }
 

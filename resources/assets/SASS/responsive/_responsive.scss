@@ -1,14 +1,29 @@
 @media screen and (max-width: 1630px) {
     .main-content {
-      font-size: 13;
+      font-size: 13px;
     }
   
     .container-boxImg {
+      @include flexbox(flex, column, center, center);
       #img-Sports {
         max-height: 50vh;
         max-width: 30vw;
       }
     }
+
+    .content-register{
+      padding: 1rem;
+    }
+
+    button.btn.btn-primary {
+      width: 8rem;
+  }
+
+  #inputState{
+    width: 150%;
+
+  }
+
   }
   
   @media screen and (max-width: 1500px) {
@@ -25,15 +40,9 @@
   @media screen and (max-width: 1375px) {
     .container-boxImg {
       padding: 3rem;
-      @include flexbox(flex, column, center, center);
-  
-      h1 {
-        font-size: 20px;
-        padding-left: 1.5rem;
-      }
   
       #img-Sports {
-        height: 30vh;
+        height: 40vh;
         width: 30vw;
       }
     }
@@ -60,8 +69,19 @@
   }
   
   @media screen and (max-width: 1200px) {
+
+    .main-content {
+      height: 80vh;
+      width: 80vw;
+    }
+
     .container-boxImg {
       padding: 1rem;
+
+      #img-Sports {
+       max-width: 400px;
+      }
+     
     }
   
     .input-with-icon {
@@ -71,15 +91,16 @@
   
   @media screen and (max-width: 1070px) {
     .main-content {
-      height: 80%;
-      width: 90%;
+      width: 90vw;
+      
   
       .container-boxImg {
-        @include flexbox(flexbox, colunm, center, center);
-  
+        height: 90vh;
+        width: 90vw;
+        
         #img-Sports {
-          height: 40vh;
-          width: 50vw;
+          height: 50%;
+          width: 100%;
         }
   
         h1 {
@@ -88,7 +109,7 @@
         }
   
         .login {
-          width: 80%;
+          width: 70%;
           height: 70%;
   
           .input-with-icon {
@@ -119,13 +140,6 @@
   }
   
   @media screen and (max-width: 955px) {
-    .container-boxImg {
-      padding: 1rem;
-      @include flexbox(column, center, unset, flex);
-  
-      h1 {
-        font-size: 22px;
-      }
   
       #img-Sports {
         height: 30vh;
@@ -142,19 +156,15 @@
       .input-field {
         padding-left: 25px;
       }
-    }
   
     .main-login {
       width: 100%;
     }
     .login {
-      border: 2px solid black;
-      border-radius: 1.5rem;
-      gap: 2rem;
       padding: 1rem;
   
       h1 {
-        font-size: 20px;
+        font-size: 2rem;
       }
   
       #img-LoginHeader {
@@ -163,21 +173,26 @@
       }
     }
   }
-  
+
   @media screen and (max-width: 800px) {
+
     .main-content {
       height: 95%;
-  
+
+      div.container-boxImg {
+        display: none;
+    
+        #img-Sports,
+        div,
+        h1 {
+          display: none;
+        }
+      }
       .login {
         width: 100%;
-        border: 2px solid black;
         border-radius: 1.5rem;
         gap: 2rem;
         padding: 1rem;
-  
-        h1 {
-          font-size: 20px;
-        }
   
         #img-LoginHeader {
           height: 23vh;
@@ -185,29 +200,23 @@
         }
       }
     }
-  
-    .container-boxImg {
-        display: none;
-  
-      #img-Sports {
-        display: none;
-      }
-  
-      div {
-        display: none;
-      }
-  
-      h1 {
-        display: none;
-      }
-    }
+
+    button.btn.btn-primary {
+      width: 12rem;
   }
+
+  #inputState{
+    width: 100%;
+
+  }
+  }
+  
   
   @media screen and (max-width: 600px) {
    
   
     div.main-login {
-      padding: 2rem;
+      padding: 1px;
     }
   
     .main-content .login #img-LoginHeader {
@@ -215,8 +224,20 @@
         width: 25vh;
       }
     }
-  @media screen and (max-width: 600px) {
-    div.main-login {
-      padding: 0.5rem;
-    }
+
+
+  @media screen and (max-width: 500px) {
+  button.btn.btn-primary {
+      width: 7.5rem;
   }
+
+  #inputState{
+    width: 100%;
+
+  }
+  }
+
+
+
+
+
